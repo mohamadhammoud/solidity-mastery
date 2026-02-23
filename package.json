@@ -1,0 +1,33 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "Template for ERC3643 related projects",
+  "license": "GPL-3.0",
+  "author": "Tokeny (APEX Group)",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tokeny-io/contracts-template"
+  },
+  "scripts": {
+    "prepare": "husky && forge soldeer install",
+    "build": "forge build",
+    "test": "forge test",
+    "lint": "forge fmt --check",
+    "lint:fix": "forge fmt",
+    "coverage": "forge coverage --no-match-coverage \"(test|script|dependencies|node_modules)\"",
+    "coverage:report": "mkdir -p coverage && forge coverage --no-match-coverage \"(test|script|dependencies|node_modules)\" --report lcov --report-file coverage/lcov.info && genhtml coverage/lcov.info -o coverage/report --branch-coverage && open coverage/report/index.html",
+    "docs": "forge doc --serve --open",
+    "clean": "forge clean"
+  },
+  "devDependencies": {
+    "@ballcat/commitlint-config-gitmoji": "^1.1.0",
+    "@commitlint/cli": "^19.8.1",
+    "husky": "^9.1.7"
+  },
+  "commitlint": {
+    "extends": [
+      "@ballcat/commitlint-config-gitmoji"
+    ]
+  }
+}
