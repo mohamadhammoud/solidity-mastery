@@ -2,7 +2,7 @@
 pragma solidity ^0.8.30;
 
 import {Test} from "@forge-std/src/Test.sol";
-import {MathLib} from "contracts/phase-2-math/week-5/DivUp.sol";
+import {MathLib} from "contracts/phase-2-math/week-5/MathLib.sol";
 
 contract DivUpWrapper {
     function divUp(uint256 a, uint256 b) external pure returns (uint256) {
