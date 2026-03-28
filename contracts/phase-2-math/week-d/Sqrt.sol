@@ -23,5 +23,7 @@ library MathLib {
             if (next >= guess) return guess;
             guess = next;
         }
+
+        return 0;
     }
 }
